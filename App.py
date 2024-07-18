@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask, render_template, jsonify, request
 import stripe
 import os
@@ -23,7 +22,7 @@ def create_checkout_session():
                     'product_data': {
                         'name': data['name'],
                     },
-                    'unit_amount': int(float(data['price']) * 100),  # Convert price to cents
+                    'unit_amount': int(float(data['price']) * 100), 
                 },
                 'quantity': 1,
             }],
